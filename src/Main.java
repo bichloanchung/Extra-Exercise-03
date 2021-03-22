@@ -9,6 +9,8 @@ public class Main {
 		game.requestPlayerThrows(game.firstPlayer);
 		//System.out.println(game.firstPlayer.getName()+ " , that was your last throw! You got: "+game.firstPlayer.getTotalPoints()+" points!");
 		game.requestPlayerThrows(game.secondPlayer);
+		
+		game.comparePointsOfPlayers(game.firstPlayer, game.secondPlayer);
 
 	}
 
