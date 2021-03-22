@@ -2,12 +2,13 @@
 public class Main {
 
 	public static void main(String[] args) {
-		Dice dice = new Dice(0);
-		//dice.throwDice();
-		Player pl1 = new Player("Player 1");
+		//Dice dice = new Dice(0);
 		Game game = new Game();
-		game.requestPlayerThrows(pl1);
 		
+		game.requestPlayerNames();
+		game.requestPlayerThrows(game.firstPlayer);
+		//System.out.println(game.firstPlayer.getName()+ " , that was your last throw! You got: "+game.firstPlayer.getTotalPoints()+" points!");
+		game.requestPlayerThrows(game.secondPlayer);
 
 	}
 
