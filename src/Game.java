@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Game {
 
 	public Player firstPlayer, secondPlayer;
+	Scanner sc = new Scanner(System.in);
 
 	public void requestPlayerNames() {
 		
-		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the name of the first player!");
 		this.firstPlayer = new Player(sc.nextLine());
 		System.out.println("Enter the name of the second player!");
@@ -15,7 +15,6 @@ public class Game {
 	
 	public void requestPlayerThrows(Player pl) {
 		Dice dice = new Dice(0);
-		Scanner scanner = new Scanner(System.in);
 		System.out.println("################  "+pl.getName()+"  #############");
 
 		for (int i = 0; i < 3; i++) {
@@ -25,7 +24,7 @@ public class Game {
 			int currentPnt = dice.getValue();
 			int savedPnt = pl.getTotalPoints();
 			pl.setTotalPoints(currentPnt + savedPnt);
-			scanner.nextLine();
+			sc.nextLine();
 		}
 		System.out.println();
 		System.out.println(pl.getName()+ " , that was your last throw! You got: "+pl.getTotalPoints()+" points!");
