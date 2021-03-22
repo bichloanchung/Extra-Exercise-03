@@ -18,7 +18,7 @@ public class Dice {
 	public void throwDice() {
 		Random rd = new Random();
 		this.value = rd.nextInt(6)+1;
-		System.out.println("Get the value : "+getValue());
+		System.out.println(getValue());
 	}
 
 }
