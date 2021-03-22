@@ -2,7 +2,9 @@
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Dice dice = new Dice(0);
+		dice.throwDice();
+		
 
 	}
 
