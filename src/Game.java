@@ -32,13 +32,18 @@ public class Game {
 		
 	}
 	public void comparePointsOfPlayers(Player firstPlayer, Player secondPlayer) {
-		System.out.println("#########  "+firstPlayer.getName() + " Vs. "+secondPlayer.getName()+"     ############");
+		System.out.println("#########  "+firstPlayer.getName() + " Vs. "+secondPlayer.getName()+" ############");
 		if(firstPlayer.getTotalPoints() > secondPlayer.getTotalPoints()) {
 			System.out.println(firstPlayer.getName()+" won the game!");
 		}else
 			System.out.println(secondPlayer.getName()+" won the game!");
 	}
 	public void runGame() {
+		requestPlayerNames();
+		requestPlayerThrows(firstPlayer);
+		requestPlayerThrows(secondPlayer);
+		comparePointsOfPlayers(firstPlayer, secondPlayer);
+		
 		
 	}
 	
